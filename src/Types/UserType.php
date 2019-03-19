@@ -27,8 +27,10 @@ class UserType extends ObjectType
                 'name' => [
                     'description' => 'Nome do autor',
                     'type' => Type::string(),
+
                 ],
                 'email' => [
+                    'description' => 'Email do autor',
                     'type' => Type::string(),
                 ],
                 'posts' => [

@@ -11,8 +11,8 @@ class Connection
         if (!self::$conn) {
             self::$conn = new \PDO(
                 'mysql:host=localhost;dbname=graphql_php',
-                'root',
-                null,
+                'debian-sys-maint',
+                '98cS7Www8OiIuZNZ',
                 [\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"]);
             self::$conn->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         }

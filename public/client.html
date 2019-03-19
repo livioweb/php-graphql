@@ -7,44 +7,44 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        const register = `mutation register($name: String!, $email: String!) {
-  createUser(name: $name, email: $email) {
-    id,
-    name,
-    email
-  }
-}`;
-        const getData = `query getData($id: ID!){
-  User(id: $id) {
-    name,
-    email,
-    id,
-    posts {
-      title
-    }
-  },
-  Posts {
-    title,
-    body
-  }
-}`;
+<script>
+    const register = `mutation register($name: String!, $email: String!) {
+          createUser(name: $name, email: $email) {
+            id,
+            name,
+            email
+          }
+        }`;
+    const getData = `query getData($id: ID!){
+          User(id: $id) {
+            name,
+            email,
+            id,
+            posts {
+              title
+            }
+          },
+          Posts {
+            title,
+            body
+          }
+        }`;
 
-        const headers = new Headers();
-        headers.append('Content-Type', 'application/json')
+    const headers = new Headers();
+    headers.append('Content-Type', 'application/json')
 
-        fetch('http://localhost:8000/', {
-            method: 'POST',
-            headers: headers,
-            body: JSON.stringify({
-                query: getData,
-                variables: {
-                    id: 5
-                    // name: 'Joana',
-                    // email: 'joana@son.com'
-                }
-            })
-        });
-    </script>
+    fetch('http://localhost:8000/', {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify({
+            query: getData,
+            variables: {
+                id: 5
+                // name: 'Nome',
+                // email: 'nome@nome.com'
+            }
+        })
+    });
+</script>
 </body>
 </html>

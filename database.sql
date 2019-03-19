@@ -14,9 +14,9 @@ CREATE TABLE IF NOT EXISTS `posts` (
 
 
 INSERT INTO `users` (`name`, `email`, `active`) VALUES 
-  ("erik", "erik@erik.com", 1),
-  ("joao", "joao@erik.com", 1),
-  ("manuel", "manuel@erik.com", 0)
+  ("Livio", "livio@livio.com", 1),
+  ("Amir", "amir@livio.com", 1),
+  ("Samuel", "samuel@amir.com", 0)
 ;
 
 INSERT INTO `posts` (`title`, `body`, `author_id`) VALUES
